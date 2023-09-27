@@ -76,7 +76,7 @@ document.querySelector('.b-10').onclick = t10;
 
 function t11() {
     let b11 = document.querySelector('.i-11');
-    document.querySelector('.out-11').innerHTML = b11.value * 10;
+    document.querySelector('.out-11').innerHTML = +b11.value + 10;
 }
 
 document.querySelector('.b-11').onclick = t11;
@@ -85,16 +85,19 @@ document.querySelector('.b-11').onclick = t11;
 // Создайте два input (i-12_1 и i-12-2) и кнопку. В первый input пользователь вводит имя, во второе фамилию. При нажатии кнопки выполняется функция, которая выводит в .out-12 строку 'Hello имя фамилия', где имя - имя пользователя и фамилия - введенная фамилия.
 
 function t12() {
-
+    let b12_1 = document.querySelector('.i-12_1');
+    let b12_2 = document.querySelector('.i-12_2');
+    document.querySelector('.out-12').innerHTML = 'Hello ' + b12_1.value + ' ' + b12_2.value;
 }
-
 document.querySelector('.b-12').onclick = t12;
 
 // Task 13.
 // Создайте два input и кнопку. В input пользователь вводит числа. При нажатии кнопки выполняется функция, которая выводит сумму данных двух чисел на страницу в .out-13.
 
 function t13() {
-
+    let b13_1 = document.querySelector('.i-13_1');
+    let b13_2 = document.querySelector('.i-13_2');
+    document.querySelector('.out-13').innerHTML = +b13_1.value + +b13_2.value;
 }
 
 document.querySelector('.b-13').onclick = t13;
@@ -102,19 +105,21 @@ document.querySelector('.b-13').onclick = t13;
 // Task 14.
 // Создайте input .i-14 и пропишите ему в html value = 77. С помощью JS измените value на 'Hello'.
 
-// document.querySelector('.i-14').value = 
+document.querySelector('.i-14').value = 'Hello';
 
 // Task 15.
 // Создайте input i-15 и получите его в переменную y. В js выполните следующее присвоение: y.style.border = '2px solid red' . Изучите результат операции.
 
-// let y = 
-// y.style.border = 
+let y = document.querySelector('.i-15');
+y.style.border = '2px solid red'
 
 // Task 16.
 // Создайте два input type=number, куда пользователь может ввести числа. Выведите на страницу сумму данных чисел по нажатию кнопки b-16
 
 function t16() {
-
+    let b16_1 = document.querySelector('.i-16-1');
+    let b16_2 = document.querySelector('.i-16-2');
+    document.querySelector('.out-16').innerHTML = +b16_1.value + +b16_2.value;
 }
 
 document.querySelector('.b-16').onclick = t16;
@@ -123,8 +128,9 @@ document.querySelector('.b-16').onclick = t16;
 // Создайте input type="text" куда пользователь может ввести строку и число. Создайте функцию, которая запускается по нажатию на кнопку. Получите значение из input в переменную t. А затем сделайте операцию t = parseInt(t), и результат операции выведите в out-17. Прочитайте за эту операцию. Попробуйте по очереди вводить 44, 44aaa, 44.3, a45 . Изучите вывод.
 
 function t17() {
-
-
+    let t = document.querySelector('.i-17');
+    t = parseInt(t.value);
+    document.querySelector('.out-17').innerHTML = t;
 }
 
 document.querySelector('.b-17').onclick = t17;
@@ -133,7 +139,10 @@ document.querySelector('.b-17').onclick = t17;
 // Создайте input type="text" куда пользователь может ввести строку и число. Создайте функцию, которая запускается по нажатию на кнопку. Получите значение из input в переменную t. А затем сделайте операцию t = parseFloat(t), и результат операции выведите в консоль. Прочитайте за эту операцию. Попробуйте по очереди вводить 44, 44aaa, 44.3, a45 . Изучите вывод.
 
 function t18() {
-
+    let t = document.querySelector('.i-18');
+    t = parseFloat(t.value);
+    document.querySelector('.out-18').innerHTML = t;
+    console.log(t);
 }
 
 document.querySelector('.b-18').onclick = t18;
@@ -142,7 +151,9 @@ document.querySelector('.b-18').onclick = t18;
 // Создайте два input type=number, куда пользователь может ввести отрицательные числа. Выведите на страницу сумму данных чисел. Мы это делали! Зачем? Затем, что нужно понимать как влияет перевод в число с помощью + и parseInt на отрицательные числа!!!
 
 function t19() {
-
+    let b19_1 = document.querySelector('.i-19-1');
+    let b19_2 = document.querySelector('.i-19-2');
+    document.querySelector('.out-19').innerHTML = parseInt(b19_1.value) + parseInt(b19_2.value); //функция parseInt срхраняет знак отрицательного числа,также как и +
 }
 
 document.querySelector('.b-19').onclick = t19;
@@ -151,7 +162,11 @@ document.querySelector('.b-19').onclick = t19;
 // Создайте опросник, куда пользователь может ввести имя, фамилию, возраст, род занятий. И кнопку. По нажатию кнопки выведите на страницу предложение 'Уважаемый Иван, Иванов, ваш возраст 33 года, по професси вы ...' куда поставьте соответствующие данные из inputов.
 
 function t20() {
-
+    let b20_1 = document.querySelector('.i-20-1');
+    let b20_2 = document.querySelector('.i-20-2');
+    let b20_3 = document.querySelector('.i-20-3');
+    let b20_4 = document.querySelector('.i-20-4');
+    document.querySelector('.out-20').innerHTML = 'Уважаемый' + ' ' + b20_1.value + ', ' + b20_2.value + ', ' + 'ваш возраст ' + b20_3.value + ' года, по професси вы ' + b20_4.value;
 }
 
 document.querySelector('.b-20').onclick = t20;

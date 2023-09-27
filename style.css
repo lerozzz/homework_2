@@ -14,14 +14,14 @@ h2 {
 section {
     margin-bottom: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px dashed #444;
+    border-bottom: 1px dashed #225f1a;
 }
 
 .block {
     width: 75px;
     height: 75px;
     margin: 25px;
-    border: 2px solid #333;
+    border: 2px solid #1e921a;
 }
 
 .active {
@@ -43,5 +43,5 @@ section {
 }
 
 .active-img {
-    border: 3px solid black;
+    border: 3px solid rgb(173, 26, 129);
 }
